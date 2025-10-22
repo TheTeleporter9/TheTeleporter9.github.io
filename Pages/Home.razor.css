@@ -1,0 +1,157 @@
+.bg {
+  position: relative;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle 700px at bottom right,
+    rgb(53, 58, 31),
+    black
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.command-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circles-container {
+  display: flex;
+  align-items: center;
+}
+
+.red-circle,
+.orange-circle,
+.green-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.red-circle {
+  background-color: #ff5f57;
+}
+
+.orange-circle {
+  background-color: #ffbd2e;
+}
+
+.green-circle {
+  background-color: #28c940;
+}
+
+.jetbrains-mono-green {
+  color: rgb(147, 231, 11);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono-blue {
+  color: rgb(100, 150, 255);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono-yellow {
+  color: rgb(228, 215, 32);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono-gray {
+  color: rgb(209, 209, 209);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono {
+  color: white;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.line-border-bottom {
+  border: none;
+  height: 2px;
+  background-color: #28c940;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.ascii-art-container {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  display: flex;
+  justify-content: center;
+}
+
+.border-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* This centers the container horizontally */
+}
+
+.ascii-art {
+  color: white;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  white-space: pre; /* This preserves spaces and line breaks */
+  font-size: 12px; /* Adjust as needed for your ASCII art */
+  line-height: 1.2; /* Tighter line spacing for ASCII art */
+}
+
+.border-terminal {
+  border: 0.5px solid #28c940;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.border-terminal::before {
+  content: "TERMINAL";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: black;
+  color: #28c940;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.centerd {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}

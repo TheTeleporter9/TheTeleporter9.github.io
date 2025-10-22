@@ -1028,3 +1028,6 @@
 /home/chirs-ubuntu/code/webdev/PortfolioWeb/obj/Debug/net8.0/ref/PortfolioWeb.dll
 /home/chirs-ubuntu/code/webdev/PortfolioWeb/obj/Debug/net8.0/scopedcss/Pages/Home.razor.rz.scp.css
 /home/chirs-ubuntu/code/webdev/PortfolioWeb/obj/Debug/net8.0/scopedcss/projectbundle/PortfolioWeb.bundle.scp.css
+/home/chirs-ubuntu/code/webdev/PortfolioWeb/obj/Debug/net8.0/PortfolioWeb.sourcelink.json
+/home/chirs-ubuntu/code/webdev/PortfolioWeb/bin/Debug/net8.0/package-lock.json
+/home/chirs-ubuntu/code/webdev/PortfolioWeb/bin/Debug/net8.0/package.json
