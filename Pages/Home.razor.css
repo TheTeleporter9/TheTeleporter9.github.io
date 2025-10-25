@@ -1,13 +1,35 @@
+/* Reset any potential body/html margins that could cause white line */
+:root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: black; /* fallback color */
+}
+
 .bg {
   position: relative;
   padding: 20px;
   width: 100vw;
-  height: 100vh;
+  min-height: 100dvh; /* dynamic viewport height, better for mobile */
+  margin: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will push the footer to the bottom */
+
+  /* smooth, centered gradient that fully reaches the bottom */
   background: radial-gradient(
-    circle 700px at bottom right,
-    rgb(53, 58, 31),
-    black
+    circle 1200px at 50% 100%,
+    rgb(53, 58, 31) 0%,
+    rgba(10, 10, 10, 0.85) 60%,
+    black 100%
   );
+
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ensures gradient stays full-height during scroll */
+  background-size: cover;
+  background-position: center bottom;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -110,6 +132,9 @@
   overflow-x: auto; /* Allow horizontal scrolling if needed */
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .border-container {
@@ -121,7 +146,8 @@
 
 .ascii-art {
   color: white;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -129,6 +155,8 @@
   white-space: pre; /* This preserves spaces and line breaks */
   font-size: 12px; /* Adjust as needed for your ASCII art */
   line-height: 1.2; /* Tighter line spacing for ASCII art */
+  display: inline-block;
+  text-align: center;
 }
 
 .border-terminal {
@@ -154,4 +182,169 @@
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Make the GitHub icon and its adjacent text white */
+.github-mark-white {
+  color: #ffffff !important;
+  filter: none !important;
+}
+
+.border-terminal .jetbrains-mono {
+  /* ensure the GitHub label next to icon inherits white */
+  color: #ffffff !important;
+}
+
+/* --- GitHub icon + label (always white) --- */
+.command-section.jetbrains-mono i.fa-github,
+.command-section.jetbrains-mono span {
+  color: #ffffff !important;
+}
+
+
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+ul.jetbrains-mono-gray {
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+ul.jetbrains-mono-gray li::before {
+  content: "• ";
+  color: #28c940;
+}
+
+.border-terminal {
+  border: 1px solid rgba(40, 201, 64, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 6px;
+  position: relative;
+}
+
+.border-terminal::before {
+  content: "TERMINAL";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: black;
+  color: #28c940;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.line-border-bottom {
+  border: none;
+  height: 2px;
+  background-color: #28c940;
+  margin: 10px 0;
+}
+
+/* Info panels beneath the ASCII art */
+.info-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;
+  margin: 14px auto 0 auto;
+}
+
+.info-panel {
+  border: 1px solid rgba(40, 201, 64, 0.75);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #d1d1d1;
+  font-size: 13px;
+}
+
+.info-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.info-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-columns {
+  display: flex;
+  gap: 18px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: rgb(100, 150, 255);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.info-list {
+  list-style: none;
+  padding-left: 8px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.info-list .sub-list {
+  list-style: disc;
+  margin-left: 18px;
+  margin-top: 8px;
+}
+
+.system-note {
+  margin-top: 8px;
+  color: rgb(160, 160, 160);
+}
+
+/* Footer styles */
+.site-footer {
+  width: 100%;
+  border-top: 1px solid rgba(40,201,64,0.25);
+  margin-top: auto; /* This pushes the footer to the bottom */
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  background: black; /* Ensures footer has solid background */
+}
+.site-footer .footer-inner {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 20px;
+}
+.site-footer p {
+  margin: 0;
+  color: rgb(180,180,180);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
 }
