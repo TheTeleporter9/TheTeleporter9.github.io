@@ -1,0 +1,2 @@
+/home/chirs-ubuntu/code/webdev/PortfolioWeb/bin/Release/net8.0/publish/package-lock.json
+/home/chirs-ubuntu/code/webdev/PortfolioWeb/bin/Release/net8.0/publish/web.config

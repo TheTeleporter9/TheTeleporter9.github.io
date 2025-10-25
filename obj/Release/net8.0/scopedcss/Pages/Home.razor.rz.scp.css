@@ -1,0 +1,350 @@
+/* Reset any potential body/html margins that could cause white line */
+:root[b-352qm2036s] {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: black; /* fallback color */
+}
+
+.bg[b-352qm2036s] {
+  position: relative;
+  padding: 20px;
+  width: 100vw;
+  min-height: 100dvh; /* dynamic viewport height, better for mobile */
+  margin: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will push the footer to the bottom */
+
+  /* smooth, centered gradient that fully reaches the bottom */
+  background: radial-gradient(
+    circle 1200px at 50% 100%,
+    rgb(53, 58, 31) 0%,
+    rgba(10, 10, 10, 0.85) 60%,
+    black 100%
+  );
+
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ensures gradient stays full-height during scroll */
+  background-size: cover;
+  background-position: center bottom;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.top-section[b-352qm2036s] {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.command-section[b-352qm2036s] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circles-container[b-352qm2036s] {
+  display: flex;
+  align-items: center;
+}
+
+.red-circle[b-352qm2036s],
+.orange-circle[b-352qm2036s],
+.green-circle[b-352qm2036s] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.red-circle[b-352qm2036s] {
+  background-color: #ff5f57;
+}
+
+.orange-circle[b-352qm2036s] {
+  background-color: #ffbd2e;
+}
+
+.green-circle[b-352qm2036s] {
+  background-color: #28c940;
+}
+
+.jetbrains-mono-green[b-352qm2036s] {
+  color: rgb(147, 231, 11);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono-blue[b-352qm2036s] {
+  color: rgb(100, 150, 255);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono-yellow[b-352qm2036s] {
+  color: rgb(228, 215, 32);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono-gray[b-352qm2036s] {
+  color: rgb(209, 209, 209);
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.jetbrains-mono[b-352qm2036s] {
+  color: white;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.line-border-bottom[b-352qm2036s] {
+  border: none;
+  height: 2px;
+  background-color: #28c940;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.ascii-art-container[b-352qm2036s] {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.border-container[b-352qm2036s] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* This centers the container horizontally */
+}
+
+.ascii-art[b-352qm2036s] {
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  white-space: pre; /* This preserves spaces and line breaks */
+  font-size: 12px; /* Adjust as needed for your ASCII art */
+  line-height: 1.2; /* Tighter line spacing for ASCII art */
+  display: inline-block;
+  text-align: center;
+}
+
+.border-terminal[b-352qm2036s] {
+  border: 0.5px solid #28c940;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.border-terminal[b-352qm2036s]::before {
+  content: "TERMINAL";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: black;
+  color: #28c940;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.centerd[b-352qm2036s] {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make the GitHub icon and its adjacent text white */
+.github-mark-white[b-352qm2036s] {
+  color: #ffffff !important;
+  filter: none !important;
+}
+
+.border-terminal .jetbrains-mono[b-352qm2036s] {
+  /* ensure the GitHub label next to icon inherits white */
+  color: #ffffff !important;
+}
+
+/* --- GitHub icon + label (always white) --- */
+.command-section.jetbrains-mono i.fa-github[b-352qm2036s],
+.command-section.jetbrains-mono span[b-352qm2036s] {
+  color: #ffffff !important;
+}
+
+
+.info-grid[b-352qm2036s] {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.info-column[b-352qm2036s] {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-text[b-352qm2036s] {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+ul.jetbrains-mono-gray[b-352qm2036s] {
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+ul.jetbrains-mono-gray li[b-352qm2036s]::before {
+  content: "• ";
+  color: #28c940;
+}
+
+.border-terminal[b-352qm2036s] {
+  border: 1px solid rgba(40, 201, 64, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 6px;
+  position: relative;
+}
+
+.border-terminal[b-352qm2036s]::before {
+  content: "TERMINAL";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: black;
+  color: #28c940;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.line-border-bottom[b-352qm2036s] {
+  border: none;
+  height: 2px;
+  background-color: #28c940;
+  margin: 10px 0;
+}
+
+/* Info panels beneath the ASCII art */
+.info-panels[b-352qm2036s] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;
+  margin: 14px auto 0 auto;
+}
+
+.info-panel[b-352qm2036s] {
+  border: 1px solid rgba(40, 201, 64, 0.75);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #d1d1d1;
+  font-size: 13px;
+}
+
+.info-header[b-352qm2036s] {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.info-body[b-352qm2036s] {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-columns[b-352qm2036s] {
+  display: flex;
+  gap: 18px;
+}
+
+.info-column[b-352qm2036s] {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label[b-352qm2036s] {
+  color: rgb(100, 150, 255);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.info-list[b-352qm2036s] {
+  list-style: none;
+  padding-left: 8px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.info-list .sub-list[b-352qm2036s] {
+  list-style: disc;
+  margin-left: 18px;
+  margin-top: 8px;
+}
+
+.system-note[b-352qm2036s] {
+  margin-top: 8px;
+  color: rgb(160, 160, 160);
+}
+
+/* Footer styles */
+.site-footer[b-352qm2036s] {
+  width: 100%;
+  border-top: 1px solid rgba(40,201,64,0.25);
+  margin-top: auto; /* This pushes the footer to the bottom */
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  background: black; /* Ensures footer has solid background */
+}
+.site-footer .footer-inner[b-352qm2036s] {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 20px;
+}
+.site-footer p[b-352qm2036s] {
+  margin: 0;
+  color: rgb(180,180,180);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+}
